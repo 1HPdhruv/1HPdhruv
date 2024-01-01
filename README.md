@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Dhruv Mishra 
-- 👀 I’m interested in St. Xavier's School,Bokaro
+- 👀 I’m interested in Technical University of Munich , Germany 
 - 🌱 I’m currently learning Java and JavaScript 
 - 💞️ I’m looking to collaborate on Web and graphics designing 
 - 📫 How to reach me t.me/inferno_6_9
