@@ -27,18 +27,19 @@ String input1(int a)
     {
         s="ONE";
     }
-    if(a==2)
+    else if(a==2)
     {
         s="TWO";
     }
-    if(a==3)
+    else if(a==3)
     {
         s="THREE";
     }
     else if(a==4)
     {
         s="FOUR";
-    }if(a==5)
+    }
+    else if(a==5)
     {
         s="FIVE";
     }
@@ -46,7 +47,7 @@ String input1(int a)
     {
         s="SIX";
     }
-    if(a==7)
+    else if(a==7)
     {
         s="SEVEN";
     }
@@ -54,7 +55,7 @@ String input1(int a)
     {
         s="EIGHT";
     }
-    if(a==9)
+    else if(a==9)
     {
         s="NINE";
     }
