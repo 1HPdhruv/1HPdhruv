@@ -1,0 +1,185 @@
+//program to print numbers between 1-1000 in words.
+
+
+import java.util.*;
+public class test12
+{
+    Scanner sc=new Scanner(System.in);
+    int n=0,r=0,r1=0,r2=0,r3=0;
+    String s="",s1="";
+    boolean flag=true;
+    test12()
+    {
+    System.out.println("ENTER AN EVEN NUMBER");
+    n=sc.nextInt();
+    if(n%2==0)
+    {
+        flag=true;
+    }
+    else
+    {
+        flag=false;
+    }
+}
+String input1(int a)
+{
+    if(a==1)
+    {
+        s="ONE";
+    }
+    if(a==2)
+    {
+        s="TWO";
+    }
+    if(a==3)
+    {
+        s="THREE";
+    }
+    else if(a==4)
+    {
+        s="FOUR";
+    }if(a==5)
+    {
+        s="FIVE";
+    }
+    else if(a==6)
+    {
+        s="SIX";
+    }
+    if(a==7)
+    {
+        s="SEVEN";
+    }
+    else if(a==8)
+    {
+        s="EIGHT";
+    }
+    if(a==9)
+    {
+        s="NINE";
+    }
+    return s;
+}
+String input2(int b)
+{
+    if(b==20)
+    {
+        s1="TWENTY";
+    }
+    else if(b==30)
+    {
+        s1="THIRTY";
+    }
+    else if(b==40)
+    {
+        s1="FORTY";
+    }
+    else if(b==50)
+    {
+        s1="FIFTY";
+    }
+    else if(b==60)
+    {
+        s1="SIXTY";
+    }
+    else if(b==70)
+    {
+        s1="SEVENTY";
+    }
+    else if(b==80)
+    {
+        s1="EIGHTY";
+    }
+    else if(b==90)
+    {
+        s1="NINETY";
+    }
+    return s1;
+}
+String calc1(String x)
+{
+    if(flag==true)
+    {
+        if(n>0&&n<10)
+        {
+            x=x+input1(n);
+        }
+        else if(n==10)
+        {
+            x="TEN";
+        }
+        else if(n==12)
+        {
+            x="TWELVE";
+        }
+        else if(n>12&&n<20)
+        {
+            r=n%10;
+            x=x+input1(r)+"TEEN";
+        }
+        else if(n>=20&&n<100)
+        {
+            r=n%10;
+            r1=n-r;
+            if(r==0)
+            {
+                x=x+input2(n);
+            }
+            else
+            {
+                x=x+input2(r1)+" "+input1(r);
+            }
+        }
+        else if(n>=100&&n<1000)
+        {
+            r=n%10;
+            r1=n%100;
+            r2=(n%100)-r;
+            r3=n/100;
+            if(r1==0)
+            {
+                x=x+input1(r3)+" "+"HUNDRED";
+            }
+            else if(r1>0&&r1<10)
+            {
+                x=x+input1(r3)+" "+"HUNDRED"+" "+input1(r);
+            }
+            else if(r1==10)
+            {
+                x=x+input1(r3)+" "+"HUNDRED"+" "+"TEN";
+            }
+            else if(r1==12)
+            {
+                x=x+input1(r3)+" "+"HUNDRED"+" "+"TWELVE";
+            }
+            else if(r1>12&&r1<20)
+            {
+                x=x+input1(r3)+" "+"HUNDRED"+" "+input1(r)+"TEEN";
+            }
+            else if(r1>=20&&r1<100)
+            {
+                if(r==0)
+                {
+                x=x+input1(r3)+" "+"HUNDRED"+" "+input2(r1);
+            }
+            else
+            {
+                x=x+input1(r3)+" "+"HUNDRED"+" "+input2(r2)+" "+input1(r);
+            }
+            }
+            
+        }
+    }
+    else
+    {
+        System.out.println("WRONG ENTRY");
+    }
+    return x;   
+}
+public static void main(String args[])
+{
+    test12 ob=new test12();
+    String y="";
+    System.out.println(ob.calc1(y));
+}
+}
